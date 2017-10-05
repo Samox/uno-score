@@ -20,7 +20,6 @@ class HistoricGraph extends Component {
         if (this.props.historic) {
             historic = this.props.historic
         }
-        console.log('render', historic)
         return ( 
             <LineChart width={600} height={300} data={historic} key={Math.random()}
                 margin={{top: 5, right: 30, left: 20, bottom: 5}}>

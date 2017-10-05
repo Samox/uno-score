@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import { Button, Input } from 'semantic-ui-react'
 import HistoricGraph from './graph.js'
+import Fetch from 'react-fetch'
+
 
 class App extends Component {
   constructor(props) {
@@ -70,6 +72,14 @@ class App extends Component {
     }, this);
     newState.historic.push(game);
     this.setState(newState);
+    console.log(fetch('https://unoespagne-2dfe.restdb.io/rest/party?apikey=59d6407316d89bb778329175', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(game)
+    }))
   }
 
   updateInputValue(evt, gamer) {
