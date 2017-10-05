@@ -27,7 +27,7 @@ class HistoricGraph extends Component {
                 <XAxis dataKey="name"/>
                 <YAxis/>
                 <CartesianGrid strokeDasharray="3 3"/>
-                <Tooltip/>
+                <Tooltip itemSorter={(item1, item2)=> item2.payload[item2.dataKey] - item1.payload[item1.dataKey]}/>
                 <Legend />
                 <Line type="monotone" dataKey="Wadidou" stroke="#0a0011" activeDot={{r: 8}}/>
                 <Line type="monotone" dataKey="Irene" stroke="#efe700" />

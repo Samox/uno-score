@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Button, Input, Checkbox } from 'semantic-ui-react'
+import { Button, Input } from 'semantic-ui-react'
 import HistoricGraph from './graph.js'
 
 class App extends Component {
